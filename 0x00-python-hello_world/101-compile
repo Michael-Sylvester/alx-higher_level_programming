@@ -1,0 +1,6 @@
+#!/bin/bash
+py_compile "$PYFILE"
+base_filename=$(basename "$PYFILE" .py)
+mv "__pycache__/$base_filename.cpython-$(python3-config --extension-suffix)" "$base_filename.pyc"
+
+
