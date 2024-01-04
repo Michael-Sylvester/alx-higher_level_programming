@@ -5,9 +5,9 @@ if __name__ == "__main__":
     arg_num = len(argv)
 
     if arg_num == 1:
-        print("0 argument.")
+        print("{} arguments.".format(arg_num - 1))
     elif arg_num == 2:
-        print("1 argument:")
+        print("{} argument:".format(arg_num - 1))
     else:
         print("{} argumanets:".format(arg_num - 1))
 
