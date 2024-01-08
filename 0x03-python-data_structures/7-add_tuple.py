@@ -14,8 +14,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
             list[count] = x
             count += 1
         else:
-            break;
+            break
 
-    sum1 =list[0] + list[2]
-    sum2 = list[1] +list[3]
+    sum1 = list[0] + list[2]
+    sum2 = list[1] + list[3]
     return (sum1, sum2)
