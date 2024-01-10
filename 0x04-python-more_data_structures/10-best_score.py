@@ -3,8 +3,8 @@ def best_score(a_dictionary):
     dic = a_dictionary
     bestvalue = 0
     best = ""
-    
-    if dic == None or len(dic) == 0:
+
+    if dic is None or len(dic) == 0:
         return None
     elif len(dic) == 1:
         best = list(dic)[0]
