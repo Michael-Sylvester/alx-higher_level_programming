@@ -1,20 +1,23 @@
  #!/usr/bin/python3
-"""Code that does something with squares
+"""
+Code that does something with squares
 
 Attributes:
-        size (int): Size of the square.
+    size (int): Size of the square.
 
-    Methods:
-        __init__(self, size=0): Initializes a new Square instance.
-        area(self): Calculates and returns the area of the square.
+Methods:
+    __init__(self, size=0): Initializes a new Square instance.
+    area(self): Calculates and returns the area of the square.
 """
 
 
 class Square:
     """ Initialise empty square class"""
+
     def __init__(self, size=0):
+
         """ 
-        Initialize size 
+        Initialize size class
 
         Args:
             size (int): The size of the new square.
