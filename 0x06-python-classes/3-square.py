@@ -13,5 +13,8 @@ class Square:
         self.__size = size
     
     def area(self):
-        """Public func for calculating area"""
+        """Public func for calculating area 
+        Returns:
+            type: int
+        """
         return self.__size ** 2
