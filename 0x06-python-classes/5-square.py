@@ -4,9 +4,9 @@
 
 class Square:
     """ Initialise empty square class"""
-    
+
     def __init__(self, size=0):
-        """ Initialize size 
+        """ Initialize size
         Args:
             size (int): The size of the new square.
         """
@@ -15,7 +15,7 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-    
+
     def area(self):
         """Return the current area of the square."""
         return self.__size ** 2
@@ -36,7 +36,7 @@ class Square:
 
     def my_print(self):
         """Print the square with #s"""
-        if (self.__size  == 0):
+        if (self.__size == 0):
             print("")
         else:
             num = self.__size
@@ -44,4 +44,3 @@ class Square:
                 for height in range(1, num + 1):
                     print("#", end="")
                 print("")
-        
