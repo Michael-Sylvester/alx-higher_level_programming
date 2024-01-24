@@ -15,6 +15,7 @@ class Square:
     def __init__(self, size=0):
         """ 
         Initialize size 
+
         Args:
             size (int): The size of the new square.
         """
@@ -27,6 +28,7 @@ class Square:
     def area(self):
         """
         Return the current area of the square.
+
         Returns: 
         int: the calculated square of the __size property
         """
