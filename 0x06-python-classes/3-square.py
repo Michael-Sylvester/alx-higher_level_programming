@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+ #!/usr/bin/python3
 """Code that does something with squares
 
 Attributes:
@@ -13,9 +13,13 @@ Attributes:
 class Square:
     """ Initialise empty square class"""
     def __init__(self, size=0):
-        """ Initialize size 
+        """ 
+        Initialize size 
         Args:
             size (int): The size of the new square.
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -24,7 +28,8 @@ class Square:
         self.__size = size
     
     def area(self):
-        """Return the current area of the square.
+        """
+        Return the current area of the square.
         Returns: 
         int: the calculated square of the __size property
         """
