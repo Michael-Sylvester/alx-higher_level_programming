@@ -1,4 +1,4 @@
- #!/usr/bin/python3
+#!/usr/bin/python3
 """Code that does something with squares"""
 
 
@@ -7,7 +7,7 @@ class Square:
 
     def __init__(self, size=0):
 
-        """ 
+        """
         Initialize size class
 
         Args:
@@ -18,12 +18,12 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-    
+
     def area(self):
         """
         Return the current area of the square.
 
-        Returns: 
+        Returns:
         int: the calculated square of the __size property
         """
         return self.__size ** 2
