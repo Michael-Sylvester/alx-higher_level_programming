@@ -1,5 +1,13 @@
 #!/usr/bin/python3
-"""Code that does something with squares"""
+"""Code that does something with squares
+
+Attributes:
+        size (int): Size of the square.
+
+    Methods:
+        __init__(self, size=0): Initializes a new Square instance.
+        area(self): Calculates and returns the area of the square.
+"""
 
 
 class Square:
@@ -16,5 +24,8 @@ class Square:
         self.__size = size
     
     def area(self):
-        """Return the current area of the square."""
+        """Return the current area of the square.
+        Returns: 
+        int: the calculated square of the __size property
+        """
         return self.__size ** 2
