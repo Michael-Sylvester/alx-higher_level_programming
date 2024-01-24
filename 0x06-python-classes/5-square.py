@@ -33,3 +33,15 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def my_print(self):
+        """Print the square with #s"""
+        if (self.__size  == 0):
+            print("")
+        else:
+            num = self.__size
+            for width in range(1, num + 1):
+                for height in range(1, num + 1):
+                    print("#", end="")
+                print("")
+        
