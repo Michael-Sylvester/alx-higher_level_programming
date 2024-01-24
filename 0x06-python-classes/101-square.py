@@ -52,12 +52,10 @@ class Square:
             print("")
         else:
             num = self.__size
-            for width in range(1, num + 1):
-                for space in range(1, self.position[0] + 1):
-                    print(" ", end="")
-                for height in range(1, num + 1):
-                    print("#", end="")
-                print("")
+            for posH in range(self.__position[1]):
+                print("\n")
+            for hash in range(self.__size):
+                print(' ' * self.__position[0] + '#' * self.__size + '\n')
 
     @property
     def position(self):
@@ -76,3 +74,17 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
+    def __str__(self):
+        """ String representation of the square for printing. """
+        result = ""
+        if self.__size == 0:
+            return result
+
+        for hieght in range(self.__position[1]):
+            result += '\n'
+
+        for breath in range(self.__size):
+            result += (' ' * self.__position[0]) + ('#' * self.__size + '\n')
+
+        return result
