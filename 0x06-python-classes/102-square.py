@@ -33,7 +33,7 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    
+
     def __eq__(self, other):
         return self.area() == other.area()
 
