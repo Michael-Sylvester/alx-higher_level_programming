@@ -1,0 +1,38 @@
+# 2-matrix_divided.txt
+   
+#Doctest for add_integer function
+def matrix_divided(matrix, div):
+    
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> me = [[5, 10], [20, 25], [30, 40]]
+
+    >>> matrix_divided(me, 5)
+    [[1.0, 2.0], [4.0, 5.0], [6.0, 8.0]]
+
+    >>> matrix_divided(me, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    >>> me = ["ff", "gg"]
+    >>> matrix_divided(me, 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> me = "yy"
+    >>> matrix_divided(me, 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> me = [["ee", "gg"], [2, 3]]
+    >>> matrix_divided(me, 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> me = [[5, 10], [20, 25], [30, 40, 60]]
+    >>> matrix_divided(me, 5)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+    >>> me = [[5.5, 10.102], [20.77, 25.1], [30.99, 40.7]]
+    >>> matrix_divided(me, 5)
+    [[1.1, 2.02], [4.15, 5.02], [6.2, 8.14]]
