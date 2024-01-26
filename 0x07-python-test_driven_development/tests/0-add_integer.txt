@@ -1,0 +1,23 @@
+# 0-add_integer.txt
+   
+#Doctest for add_integer function
+def add_integer(a, b=98):
+    
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+    >>> add_integer(1,2)
+    3
+
+    >>> add_integer(-5, 8)
+    3
+
+    >>> add_integer(5.9, 2.2)
+    7
+
+    >>> add_integer('d', 55)
+    Traceback (most recent call last):
+    TypeError: a must be an integer or b must be an integer
+
+    >>> add_integer(4, [3,5])
+    Traceback (most recent call last):
+    TypeError: a must be an integer or b must be an integer
