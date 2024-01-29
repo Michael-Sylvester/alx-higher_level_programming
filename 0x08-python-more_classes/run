@@ -1,0 +1,3 @@
+#!/bin/bash
+# Runs one of the Class Retangle files when there is test code in it
+./$1-rectangle.py

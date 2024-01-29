@@ -1,0 +1,3 @@
+#!/bin/bash
+# Runs pycodestyle check for one of the Class Rectangle modules
+pycodestyle $1-rectangle.py

@@ -1,0 +1,3 @@
+#!/bin/bash
+# Copys first file when it has the samee name as 2nd file aside from the number
+cp $1-rectangle.py $2-rectangle.py
