@@ -64,4 +64,5 @@ class Rectangle:
         return rep
 
     def __del__(self):
+        """Prints this message before instance deletion"""
         print("Bye rectangle...")
