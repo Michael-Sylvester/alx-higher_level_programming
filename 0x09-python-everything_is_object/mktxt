@@ -1,0 +1,10 @@
+#!/bin/bash
+
+index=0
+
+while [ $index -le 29 ]
+do
+	touch $index-answer.txt
+	echo "$index-answer.txt created"
+	((index++))
+done
