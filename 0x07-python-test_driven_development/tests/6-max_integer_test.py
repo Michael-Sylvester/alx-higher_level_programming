@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """Python modual for add function"""
 
-
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """Class holding unit tests for max integer function"""
+
     
     def test_maxInteger(self):
         self.assertAlmostEqual(max_integer([]), None)
