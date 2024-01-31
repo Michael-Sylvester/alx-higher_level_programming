@@ -24,6 +24,3 @@ def max_integer(a_list=[]):
             result = a_list[i]
         i += 1
     return result
-
-print(max_integer([1, 2, 3, 4]))
-print(max_integer([1, 3, 4, 2]))
