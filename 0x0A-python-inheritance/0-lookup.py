@@ -2,8 +2,9 @@
 """module for lookup function"""
 
 def lookup(obj):
-    atributes = dir(obj)
-    return atributes
+    """function to look up attributes"""
+    attributes = list(dir(obj))
+    return attributes
 
 if __name__ == "__main__":
     pass
