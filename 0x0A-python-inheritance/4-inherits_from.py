@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module for checking obj class"""
+"""module for checking subclass"""
 
 
 def inherits_from(obj, a_class):
