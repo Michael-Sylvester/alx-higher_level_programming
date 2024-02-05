@@ -5,7 +5,15 @@ def test_print_sorted():
         Print new instance of list in ascending order
 
         >>> MyList = __import__('1-my_list').MyList
-        
+
         >>> my_list = MyList([3, 2, 1])
         >>> my_list.print_sorted()
         [1, 2, 3]
+
+        >>> my_list.clear()
+        >>> my_list.print_sorted()
+        []
+
+        >>> my_list = MyList([5])
+        >>> my_list.print_sorted()
+        [5]
