@@ -7,6 +7,9 @@ def add_attribute(obj, attr, value):
     if not isinstance(attr, str):
         raise TypeError("can't add new attribute")
 
+    if not isinstance(obj, object):
+        raise TypeError("can't add new attribute")
+
     if (hasattr(obj, '__slots__') and attr not in obj.__slots__) or\
             not hasattr(obj, __dict__):
         raise TypeError("can't add new attribute")
