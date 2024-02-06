@@ -18,3 +18,26 @@ class BaseGeometry:
     >>> bg.integer_validator("Harry", 0)
     Traceback (most recent call last):
     ValueError: Harry must be greater than 0
+
+    >>> bg.integer_validator("Yo", {1, 77})
+    Traceback (most recent call last):
+    TypeError: Yo must be an integer
+
+    integer_validator method tuple:
+    >>> bg.integer_validator("Fish", (88, 2))
+    Traceback (most recent call last):
+    TypeError: Fish must be an integer
+
+    integer_validator method empty string:
+    >>> bg.integer_validator("", 1)
+
+    integer_validator method empty string:
+    >>> bg.integer_validator("Yoyo", 1)
+
+    >>> bg.integer_validator("foo", None)
+    Traceback (most recent call last):
+    TypeError: foo must be an integer
+
+    >>> bg.integer_validator("AB", [11])
+    Traceback (most recent call last):
+    TypeError: AB must be an integer
