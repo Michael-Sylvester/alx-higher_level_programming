@@ -41,3 +41,7 @@ class BaseGeometry:
     >>> bg.integer_validator("AB", [11])
     Traceback (most recent call last):
     TypeError: AB must be an integer
+
+    >>> bg.integer_validator("AB", True)
+    Traceback (most recent call last):
+    TypeError: AB must be an integer
