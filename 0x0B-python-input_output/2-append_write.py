@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Module for writing to files"""
+"""Module for appending from files"""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """File to write text to a file"""
-    with open(filename, 'w', encoding='utf-8') as file:
+    with open(filename, 'a', encoding='utf-8') as file:
         num = file.write(text)
     return num
 
