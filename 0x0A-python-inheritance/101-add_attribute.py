@@ -19,3 +19,6 @@ def add_attribute(obj, attr, value):
         raise TypeError("can't add new attribute")
 
     status = setattr(obj, attr, value)
+
+if __name__ == "__main__":
+    pass
