@@ -13,8 +13,10 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
+        """Function for calculating area based on private attributes"""
         return self.__width * self.__height
 
     def __str__(self):
+        """Function for determining what class looks like as string"""
         msg = "[Rectangle] {}/{}".format(self.__width, self.__height)
         return msg
