@@ -11,15 +11,12 @@ def add_attribute(obj, attr, value):
             not hasattr(obj, __dict__):
         raise TypeError("can't add new attribute")
 
-    if not hasattr(obj, __dict__):
-        raise TypeError("can't add new attribute")
-
     builtin_types = [int, str, list, dict, tuple, set,
                      float, bool, complex, bytes]
     if type(obj) in builtin_types:
         raise TypeError("can't add new attribute")
 
-    status = setattr(obj, attr, value)
+    setattr(obj, attr, value)
 
 
 if __name__ == "__main__":
