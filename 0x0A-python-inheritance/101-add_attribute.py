@@ -7,18 +7,20 @@ def add_attribute(obj, attr, value):
     if not isinstance(attr, str):
         raise TypeError("can't add new attribute")
 
-    if not isinstance(obj, object):
+    if (hasattr(obj, '__slots__') and attr not in obj.__slots__) or\
+            not hasattr(obj, __dict__):
         raise TypeError("can't add new attribute")
 
-    if hasattr(obj, '__slots__') and attr not in obj.__slots__:
+    if not hasattr(obj, __dict__):
         raise TypeError("can't add new attribute")
 
-    builtin_types = [int, str, list, dict, tuple, set,co
+    builtin_types = [int, str, list, dict, tuple, set,
                      float, bool, complex, bytes]
     if type(obj) in builtin_types:
         raise TypeError("can't add new attribute")
 
     status = setattr(obj, attr, value)
+
 
 if __name__ == "__main__":
     pass
