@@ -6,7 +6,7 @@ def read_file(filename=""):
     """File to read all info from a file"""
     with open(filename, 'r') as file:
         line = file.read()
-    return line
+    print(line)
 
 
 if __name__ == "__main__":
