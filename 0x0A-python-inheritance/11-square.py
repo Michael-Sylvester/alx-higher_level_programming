@@ -16,4 +16,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Function for determining what class looks like as string"""
-        return Rectangle(self.__size, self.__size).__str__()
+        msg = "[Square] {}/{}".format(self.__size, self.__size)
+        return msg
