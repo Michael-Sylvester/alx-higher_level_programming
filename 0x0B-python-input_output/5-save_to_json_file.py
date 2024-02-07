@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for appending from files"""
+"""Module for saving to json files"""
 import json
 
 
