@@ -12,12 +12,9 @@ filename = "add_item.json"
 if not os.path.exists(filename):
     newlist = list()
     save_to_json_file(newlist, filename)
-    print("New {} file created".format(filename))
 else:
-    print("opening {}".format(filename))
     filelist = list(load_from_json_file(filename))
     if len(sys.argv) > 1:
-        print("Command line arguments found.\nAdding to {}".format(filename))
         for i in range(1, len(sys.argv)):
             filelist.append(sys.argv[i])
         save_to_json_file(filelist, filename)
