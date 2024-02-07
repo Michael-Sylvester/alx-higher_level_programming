@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Module for loading from json files"""
-import json
+"""Module for changing class to json rep"""
 
 
 def class_to_json(obj):
-    return json.dumps(obj.__dict__)
+    return {attr: getattr(obj, attr) for attr in vars(obj)}
