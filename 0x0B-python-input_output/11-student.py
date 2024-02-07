@@ -23,6 +23,7 @@ class Student:
             return newd
 
     def reload_from_json(self, json):
+        """Sets new attribut values from json dict"""
         keylist = json.keys()
         for key in keylist:
             setattr(self, key, json.get(key))
