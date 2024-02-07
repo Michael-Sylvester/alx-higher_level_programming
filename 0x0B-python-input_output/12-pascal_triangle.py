@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """Draws th rows of pascals triangle as a list of lists"""
     if n <= 0:
         return []
 
@@ -16,3 +17,7 @@ def pascal_triangle(n):
         triangle.append(row)
 
     return triangle
+
+
+if __name__ == "__main__":
+    pass
