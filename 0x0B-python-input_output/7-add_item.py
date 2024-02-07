@@ -12,7 +12,7 @@ filelist = list()
 
 try:
     filelist = load_from_json_file(filename)
-except:
+except (json.decoder.JSONDecodeError, FileNotFoundError):
     save_to_json_file(list(), filename)
 
 if len(sys.argv) > 1:
