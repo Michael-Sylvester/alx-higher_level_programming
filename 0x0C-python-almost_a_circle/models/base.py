@@ -59,6 +59,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        with open("{}.json".format(cls.__name__), 'r', encoding="utf-8") as file:
+        with open("{}.json".format(cls.__name__),
+                  'r', encoding="utf-8") as file:
             data = list(json.load(file))
         return data
