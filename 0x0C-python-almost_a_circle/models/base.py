@@ -56,3 +56,9 @@ class Base:
             dummy = cls(3)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        with open("{}.json".format(cls.__name__), 'r', encoding="utf-8") as file:
+            data = list(json.load(file))
+        return data

@@ -14,11 +14,11 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Return Class attributes as a dictionary"""
-        return {key: getattr(self, key) for key in ['x',
-                                                    'y',
-                                                    'id',
-                                                    'height',
-                                                    'width']}
+        return {"id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y}
 
     def display(self):
         """Display the obj as a group of #"""
@@ -58,7 +58,7 @@ class Rectangle(Base):
                 if key == "id":
                     super().__init__(item)
                 elif key == "width":
-                    self.size = item
+                    self.width = item
                 elif key == "height":
                     self.height = item
                 elif key == "x":

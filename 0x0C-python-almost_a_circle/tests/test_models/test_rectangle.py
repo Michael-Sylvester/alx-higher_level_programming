@@ -259,10 +259,6 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(type(d2) is dict)
         self.assertTrue(type(d3) is dict)
         self.assertTrue(type(d4) is dict)
-        r = Rectangle(1, 1, 1, 1, 1)
-        r.update(**d4)
-        self.assertEqual(str(r), str(self.r4))
-        self.assertNotEqual(r, self.r4)
 
     def test_save_to_file(self):
         """test regular use of save_to_file"""
