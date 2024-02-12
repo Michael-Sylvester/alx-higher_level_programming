@@ -11,11 +11,17 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     def to_dictionary(self):
-        return {key: getattr(self, key) for key in ['x', 'y','id', 'height', 'width']}
-    
+        """Return Class attributes as a dictionary"""
+        return {key: getattr(self, key) for key in ['x',
+                                                    'y',
+                                                    'id',
+                                                    'height',
+                                                    'width']}
+
     def display(self):
+        """Display the obj as a group of #"""
         symbol = '#'
         value = ""
         for num in range(self.__y):
@@ -29,31 +35,35 @@ class Rectangle(Base):
         print(value)
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
 
     def update(self, *args, **kwargs):
         if args and len(args) > 0:
-            try :
+            try:
                 self.id = args[0]
                 self.width = args[1]
                 self.height = args[2]
                 self.x = args[3]
                 self.y = args[4]
-            except IndexError as e :
+            except IndexError as e:
                 return
-        elif kwargs and len(kwargs) > 0 :
-            for key, item in kwargs.items() :
-                if key == "id" :
+        elif kwargs and len(kwargs) > 0:
+            for key, item in kwargs.items():
+                if key == "id":
                     super().__init__(item)
-                elif key == "width" :
+                elif key == "width":
                     self.size = item
-                elif key == "height" :
+                elif key == "height":
                     self.height = item
-                elif key == "x" :
+                elif key == "x":
                     self.x = item
-                elif key == "y" :
+                elif key == "y":
                     self.y = item
-    
+
     @property
     def width(self):
         """getter for width"""
@@ -62,7 +72,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """setter for width"""
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -76,7 +86,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """setter for height"""
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -90,7 +100,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setter for x"""
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -104,7 +114,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setter for y"""
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
@@ -112,5 +122,3 @@ class Rectangle(Base):
 
     def area(self):
         return self.__height * self.__width
-    
-

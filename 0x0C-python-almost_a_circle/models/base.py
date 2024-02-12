@@ -18,6 +18,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """change the object dictionary to a json string"""
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         jsonlist = json.dumps(list_dictionaries)
@@ -26,7 +27,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """converts list of objects to """
-        with open("{}.json".format(cls.__name__), 'w', encoding="utf-8") as json_file:
+        with open("{}.json".format(cls.__name__),
+                  'w', encoding="utf-8") as json_file:
             jsonstring = ""
             if list_objs is None or list_objs == []:
                 jsonstring = cls.to_json_string(list_objs)
@@ -39,16 +41,18 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Change json string to obj dictionay string"""
         if json_string is None or json_string == "":
             return []
         obj_list = list(json.loads(json_string))
         return obj_list
-    
+
     @classmethod
     def create(cls, **dictionary):
-            if cls.__name__ == "Rectangle":
-                dummy = cls(2, 1)
-            else:
-                dummy = cls(3)
-            dummy.update(**dictionary)
-            return dummy
+        """Create a new obj based on the dictionary info of another object"""
+        if cls.__name__ == "Rectangle":
+            dummy = cls(2, 1)
+        else:
+            dummy = cls(3)
+        dummy.update(**dictionary)
+        return dummy

@@ -8,7 +8,10 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.width)
 
     @property
     def size(self):
@@ -27,24 +30,27 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         if args and len(args) > 0:
-            try :
+            try:
                 self.id = args[0]
                 self.size = args[1]
                 self.x = args[2]
                 self.y = args[3]
-            except IndexError as e :
+            except IndexError as e:
                 return
-        elif kwargs and len(kwargs) > 0 :
-            for key, item in kwargs.items() :
-                if key == "id" :
-                    super().__init__(self.size, self.size, self.x, self.y, item)
-                elif key == "size" :
+        elif kwargs and len(kwargs) > 0:
+            for key, item in kwargs.items():
+                if key == "id":
+                    super().__init__(self.size,
+                                     self.size,
+                                     self.x,
+                                     self.y,
+                                     item)
+                elif key == "size":
                     self.size = item
-                elif key == "x" :
+                elif key == "x":
                     self.x = item
-                elif key == "y" :
+                elif key == "y":
                     self.y = item
 
     def to_dictionary(self):
-        return {key: getattr(self, key) for key in ['x', 'y','id', 'size']}
-   
+        return {key: getattr(self, key) for key in ['x', 'y', 'id', 'size']}
