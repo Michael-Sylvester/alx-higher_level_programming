@@ -8,6 +8,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """determin how the class is represented as a string"""
         return "[Square] ({}) {}/{} - {}".format(self.id,
                                                  self.x,
                                                  self.y,
@@ -29,6 +30,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """update the attributes of the obj"""
         if args and len(args) > 0:
             try:
                 self.id = args[0]
@@ -53,4 +55,5 @@ class Square(Rectangle):
                     self.y = item
 
     def to_dictionary(self):
+        """Return Class attributes as a dictionary"""
         return {key: getattr(self, key) for key in ['x', 'y', 'id', 'size']}

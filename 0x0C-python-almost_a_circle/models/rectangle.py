@@ -35,6 +35,7 @@ class Rectangle(Base):
         print(value)
 
     def __str__(self):
+        """determin how the class is represented as a string"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.__x,
                                                        self.__y,
@@ -42,6 +43,7 @@ class Rectangle(Base):
                                                        self.__height)
 
     def update(self, *args, **kwargs):
+        """update the attributes of the obj"""
         if args and len(args) > 0:
             try:
                 self.id = args[0]
@@ -108,7 +110,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        "getter for y"
+        """getter for y"""
         return self.__y
 
     @y.setter
@@ -121,4 +123,5 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Calculate area of rectangle"""
         return self.__height * self.__width
