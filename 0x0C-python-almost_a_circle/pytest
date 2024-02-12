@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Checking models---------------------------"
+pycodestyle models/*.py
+
+echo "Checking main dir ------------------------"
+pycodestyle *.py
+
+echo "Check Finished"
