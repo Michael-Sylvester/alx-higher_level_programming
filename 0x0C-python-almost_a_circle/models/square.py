@@ -6,7 +6,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """CLass sqaure is a child of rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(size, size, x, y, id)
+        Rectangle.__init__(size, size, x, y, id)
 
     def __str__(self):
         """determin how the class is represented as a string"""

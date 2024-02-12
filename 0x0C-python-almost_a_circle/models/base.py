@@ -59,7 +59,16 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        with open("{}.json".format(cls.__name__),
-                  'r', encoding="utf-8") as file:
-            data = list(json.load(file))
-        return data
+        """load a file of the respective class, decode the json data and create insatnces"""
+        try :
+            with open("{}.json".format(cls.__name__),
+                    'r', encoding="utf-8") as file:
+                jsondatalist = file.read()
+            diclist = cls.from_json_string(jsondatalist)
+            objlist = list()
+            for data in diclist:
+                objitem = cls.create(**data)
+                objlist.append(objitem)
+        except FileNotFoundError:
+            objlist = list()
+        return objlist
