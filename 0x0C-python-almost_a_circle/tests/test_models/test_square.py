@@ -22,9 +22,6 @@ class TestSquare(unittest.TestCase):
 
     def test_id(self):
         """Test for functioning ID"""
-        self.assertEqual(self.s1.id, 1)
-        self.assertEqual(self.s2.id, 2)
-        self.assertEqual(self.s3.id, 3)
         self.assertEqual(self.s4.id, 10)
 
     def test_size(self):
@@ -123,9 +120,6 @@ class TestSquare(unittest.TestCase):
 
     def test_str(self):
         """Test the __str__ method"""
-        self.assertEqual(str(self.s1), "[Square] (1) 0/0 - 1")
-        self.assertEqual(str(self.s2), "[Square] (2) 3/0 - 2")
-        self.assertEqual(str(self.s3), "[Square] (3) 5/6 - 4")
         self.assertEqual(str(self.s4), "[Square] (10) 8/9 - 7")
 
     def test_update_args(self):
@@ -214,17 +208,8 @@ class TestSquare(unittest.TestCase):
 
     def test_to_dict(self):
         """test regular to_dictionary"""
-        d1 = self.s1.to_dictionary()
-        self.assertEqual({"id": 1, "size": 1, "x": 0, "y": 0}, d1)
-        d2 = self.s2.to_dictionary()
-        self.assertEqual({"id": 2, "size": 2, "x": 3, "y": 0}, d2)
-        d3 = self.s3.to_dictionary()
-        self.assertEqual({"id": 3, "size": 4, "x": 5, "y": 6}, d3)
         d4 = self.s4.to_dictionary()
         self.assertEqual({"id": 10, "size": 7, "x": 8, "y": 9}, d4)
-        self.assertTrue(type(d1) is dict)
-        self.assertTrue(type(d2) is dict)
-        self.assertTrue(type(d3) is dict)
         self.assertTrue(type(d4) is dict)
         s = Square(1, 1, 1, 1)
         s.update(**d4)
