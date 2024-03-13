@@ -1,2 +1,2 @@
 -- Print table description
-DESC first_table;
+SHOW CREATE TABLE second_table;
