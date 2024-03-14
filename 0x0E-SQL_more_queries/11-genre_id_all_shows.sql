@@ -1,4 +1,4 @@
--- Sleect based on 3 tables
+-- Select based on 3 tables and JOIN 
 
 SELECT tv_shows.title, IFNULL(tv_show_genres.genre_id, 'NULL') AS genre_id
 FROM tv_shows
