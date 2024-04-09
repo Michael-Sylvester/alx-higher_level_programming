@@ -8,8 +8,8 @@ if (process.argv[2] !== undefined) {
 
   if (isNaN(size)) {
     console.log(errmsg);
-  } else if(size < 0) {
-
+  } else if (size < 0) {
+    console.log('');
   } else {
     for (let i = 0; i < size; i++) {
       let square = '';
