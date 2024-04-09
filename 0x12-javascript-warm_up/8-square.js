@@ -8,15 +8,15 @@ if (process.argv[2] !== undefined) {
 
   if (isNaN(size)) {
     console.log(errmsg);
-  } else if (size < 0) {
-    size++;
   } else {
-    for (let i = 0; i < size; i++) {
-      let square = '';
-      for (let x = 0; x < size; x++) {
-        square += 'x';
+    if (size >= 0) {
+      for (let i = 0; i < size; i++) {
+        let square = '';
+        for (let x = 0; x < size; x++) {
+          square += 'x';
+        }
+        console.log(square);
       }
-      console.log(square);
     }
   }
 } else {
