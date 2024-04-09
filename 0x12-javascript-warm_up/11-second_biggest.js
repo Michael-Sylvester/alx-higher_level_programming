@@ -7,13 +7,15 @@ let i = 2;
 if (process.argv.length < 4) {
   console.log(0);
 } else {
-  big2 = parseInt(process.argv[i]);
-  biggest = big2;
-
+  biggest = parseInt(process.argv[i]);
+  big2 = biggest
   for (i = 2; process.argv[i] !== undefined; i++) {
     const temp = parseInt(process.argv[i]);
     if (temp > biggest) {
       biggest = temp;
+    }
+    if (temp < big2) {
+      big2 = temp;
     }
   }
   for (i = 2; process.argv[i] !== undefined; i++) {
