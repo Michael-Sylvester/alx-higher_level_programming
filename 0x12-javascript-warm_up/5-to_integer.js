@@ -8,7 +8,7 @@ if (process.argv[2] !== undefined) {
   if (!isNaN(num)) {
     msg += num;
     console.log(msg);
-  } else{
-    console.log("Not a number")
+  } else {
+    console.log('Not a number');
   }
 }
