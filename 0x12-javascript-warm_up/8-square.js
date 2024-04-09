@@ -4,7 +4,7 @@ let size;
 const errmsg = 'Missing size';
 
 if (process.argv[2] !== undefined) {
-  size = parseInt(process.argv[2]);
+  size = Number(process.argv[2]);
 
   if (isNaN(size)) {
     console.log(errmsg);
