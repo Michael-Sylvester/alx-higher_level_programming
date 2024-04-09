@@ -4,7 +4,7 @@ let big2;
 let biggest;
 let i = 2;
 
-if (process.argv.length < 3) {
+if (process.argv.length < 4) {
   console.log(0);
 } else {
   big2 = parseInt(process.argv[i]);
