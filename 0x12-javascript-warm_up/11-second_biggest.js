@@ -8,7 +8,7 @@ if (process.argv.length < 4) {
   console.log(0);
 } else {
   biggest = parseInt(process.argv[i]);
-  big2 = biggest
+  big2 = biggest;
   for (i = 2; process.argv[i] !== undefined; i++) {
     const temp = parseInt(process.argv[i]);
     if (temp > biggest) {
