@@ -5,9 +5,9 @@ const myObject = {
 };
 console.log(myObject);
 
-Object.prototype.incr = function() {
-  this.value += 1;
-}
+Object.setPrototypeOf(myObject, { 
+  incr : function() {this.value += 1;}
+});
 
 myObject.incr();
 console.log(myObject);
