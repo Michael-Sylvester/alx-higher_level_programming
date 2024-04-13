@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Add Clalifornia to the States using the relationship
+"""Query each State and all citites linked to it
 """
 import sys
 from sqlalchemy import create_engine
