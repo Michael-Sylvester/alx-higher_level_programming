@@ -7,7 +7,7 @@ import sys
 
 
 def main():
-    """Main function"""
+    """Mina functoin"""
     url = sys.argv[1]
     req = curl.Request(url)
     try:
@@ -16,7 +16,7 @@ def main():
     except HTTPError as e:
         print('Error code: ', e.code)
     except URLError as e:
-        print('URLError ', e.reason)
+        print('URLError: ', e.reason)
 
 
 if __name__ == '__main__':

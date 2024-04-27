@@ -7,10 +7,9 @@ import sys
 def main():
     """Main function"""
     url = sys.argv[1]
-    email = {'email': sys.argv[2]}
-    req = requests.post(url, data=email)
+    req = requests.post(url)
 
-    print(req.text)
+    print(req.headers.get('X-Request-Id'))
 
 
 if __name__ == '__main__':
