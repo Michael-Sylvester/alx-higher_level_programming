@@ -4,10 +4,11 @@ from urllib.error import HTTPError, URLError
 import urllib.request as curl
 import urllib.parse as parser
 
+
 def main():
     """Main function"""
     url = 'https://alx-intranet.hbtn.io/status'
-    
+
     req = curl.Request(url)
     try:
         with curl.urlopen(req) as response:
@@ -20,7 +21,8 @@ def main():
     except HTTPError as e:
         print('HTTPError: ', e.code)
     except URLError as e:
-        print ('URLError ', e.reason)
+        print('URLError ', e.reason)
+
 
 if __name__ == '__main__':
     main()

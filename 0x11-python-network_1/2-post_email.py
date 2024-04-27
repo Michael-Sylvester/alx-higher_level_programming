@@ -5,6 +5,7 @@ import urllib.request as curl
 import urllib.parse as parser
 import sys
 
+
 def main():
     """Main function"""
     url = sys.argv[1]
@@ -19,7 +20,8 @@ def main():
     except HTTPError as e:
         print('HTTPError: ', e.code)
     except URLError as e:
-        print ('URLError ', e.reason)
+        print('URLError ', e.reason)
+
 
 if __name__ == '__main__':
     main()
