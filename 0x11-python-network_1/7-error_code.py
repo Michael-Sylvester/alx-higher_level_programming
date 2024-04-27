@@ -7,10 +7,13 @@ import sys
 def main():
     """Main function"""
     url = sys.argv[1]
-    email = {'email': sys.argv[2]}
-    req = requests.post(url, data=email)
+    req = requests.get(url)
 
-    print(req.text)
+    code = req.status_code
+    if code >= 400:
+        print("Error code: {}".format(code))
+    else:
+        print(req.text)
 
 
 if __name__ == '__main__':
