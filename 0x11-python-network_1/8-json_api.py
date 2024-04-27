@@ -11,7 +11,7 @@ def main():
         data = {'q': sys.argv[1]}
     else:
         data = {'q': ""}
-    req = requests.post(url, params=data)
+    req = requests.post(url, data=data)
 
     try:
         jdata = req.json()
