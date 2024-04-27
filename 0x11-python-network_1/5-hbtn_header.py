@@ -7,7 +7,7 @@ import sys
 def main():
     """Main function"""
     url = sys.argv[1]
-    req = requests.post(url)
+    req = requests.get(url)
 
     print(req.headers.get('X-Request-Id'))
 
